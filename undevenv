@@ -1,0 +1,2 @@
+sudo update-alternatives --set ruby /usr/bin/ruby1.8
+sudo update-alternatives --set gem /usr/bin/gem1.8
