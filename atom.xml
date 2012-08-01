@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[An empty blog]]></title>
+  <title><![CDATA[A blog]]></title>
   <link href="http://benbc.github.com/atom.xml" rel="self"/>
   <link href="http://benbc.github.com/"/>
-  <updated>2012-07-29T13:14:23+01:00</updated>
+  <updated>2012-08-01T22:25:13+01:00</updated>
   <id>http://benbc.github.com/</id>
   <author>
     <name><![CDATA[Ben Butler-Cole]]></name>
