@@ -5,3 +5,4 @@ export GEM_HOME=/var/lib/gems/1.9
 export PATH=/var/lib/gems/1.9.1/bin:$PATH
 which bundle >/dev/null || sudo gem install bundler
 bundle install --path=.bundle/gems --binstubs=.bundle/bin
+export PATH=.bundle/bin:$PATH
