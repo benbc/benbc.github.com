@@ -6,8 +6,7 @@ comments: true
 categories:
 ---
 
-(This post was insprired by a sneak preview of [a blog
-post](http://continuousdelivery.com/2012/08/why-software-development-methodologies-suck/
+(This post was insprired by a sneak preview of [a blog post](http://continuousdelivery.com/2012/08/why-software-development-methodologies-suck/
 "Why software development methodologies suck") by Jez Humble.)
 
 Methodologies or other defined practices can have value in so far as
