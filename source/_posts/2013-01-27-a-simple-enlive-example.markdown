@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A simple Enlive example"
-date: 2013-01-19 22:17
+date: 2013-01-27 22:17
 comments: true
 categories:
 published: false
