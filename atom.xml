@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[A blog]]></title>
+  <title><![CDATA[Pig: contented]]></title>
   <link href="http://benbc.github.com/atom.xml" rel="self"/>
   <link href="http://benbc.github.com/"/>
-  <updated>2012-08-02T13:31:03+01:00</updated>
+  <updated>2013-01-27T22:11:04+00:00</updated>
   <id>http://benbc.github.com/</id>
   <author>
     <name><![CDATA[Ben Butler-Cole]]></name>
@@ -18,8 +18,7 @@
     <link href="http://benbc.github.com/blog/2012/08/01/why-software-development-methodologies-rock/"/>
     <updated>2012-08-01T20:24:00+01:00</updated>
     <id>http://benbc.github.com/blog/2012/08/01/why-software-development-methodologies-rock</id>
-    <content type="html"><![CDATA[<p>(This post was insprired by a sneak preview of <a href="http://continuousdelivery.com/2012/08/why-software-development-methodologies-suck/" title="Why software development methodologies suck">a blog
-post</a> by Jez Humble.)</p>
+    <content type="html"><![CDATA[<p>(This post was insprired by a sneak preview of <a href="http://continuousdelivery.com/2012/08/why-software-development-methodologies-suck/" title="Why software development methodologies suck">a blog post</a> by Jez Humble.)</p>
 
 <p>Methodologies or other defined practices can have value in so far as
 they cause people to reflect on and criticise what they are
