@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Pig: contented]]></title>
+  <title><![CDATA[Pig, satisfied]]></title>
   <link href="http://benbc.github.com/atom.xml" rel="self"/>
   <link href="http://benbc.github.com/"/>
-  <updated>2013-01-27T22:18:42+00:00</updated>
+  <updated>2013-01-28T09:35:32+00:00</updated>
   <id>http://benbc.github.com/</id>
   <author>
     <name><![CDATA[Ben Butler-Cole]]></name>
@@ -19,15 +19,15 @@
     <updated>2013-01-27T22:17:00+00:00</updated>
     <id>http://benbc.github.com/blog/2013/01/27/a-simple-enlive-example</id>
     <content type="html"><![CDATA[<p><a href="https://github.com/cgrand/enlive">Enlive</a> is a Clojure library for generating HTML that uses
-<em>transformations</em> instead of <em>templates</em>. Rather than starting with
+<strong>transformations</strong> instead of <strong>templates</strong>. Rather than starting with
 templates containing code which are then executed to produce the final
 output, it starts with plain HTML which is subjected to a series of
 transformations; the transformations are ordinary functions, targeted
 to the right part of the DOM by standard CSS selectors.</p>
 
 <p>This approach allows a clean separation between template and code; it
-avoids creating a novel, often crippled and always nasty hybrid
-language for the templates.</p>
+avoids creating a novel hybrid language&mdash;often crippled and always
+nasty&mdash;for the templates.</p>
 
 <p>As you can tell, I am pretty sold on the benefits of selector-based
 templating, so I was excited to come across Enlive when I started
@@ -37,8 +37,13 @@ straight in my head which bits were really necessary to do something
 simple.</p>
 
 <p>So, having wrestled with this for a while (and having surface after a
-longish dive in the Enlive source code), I&#8217;ve put together a <a href="https://github.com/benbc/simple-enlive-example">basic example</a>, which I think takes a reasonable, minimal
-approach to using Enlive for a simple web application.</p>
+longish dive in the Enlive source code), I&#8217;ve put together a <a href="https://github.com/benbc/simple-enlive-example">basic example</a>, which I think takes a reasonable, minimal approach
+to using Enlive for a simple web application. It is not intended to be
+a complete introduction to what Enlive can do; for that, read the
+tutorials and <a href="https://github.com/cgrand/enlive">documentation</a>.</p>
+
+<!--more-->
+
 
 <p>When using Enlive, it&#8217;s helpful to know that the library generally
 uses an internal data structure representation of HTML (called <em>nodes</em>
@@ -110,6 +115,9 @@ result with <code>emit*</code>.</p>
 </span><span class='line'>  <span class="p">(</span><span class="nf">GET</span> <span class="s">&quot;/show&quot;</span> <span class="p">[]</span> <span class="p">(</span><span class="nf">emit*</span> <span class="p">(</span><span class="nf">show</span> <span class="nv">things</span><span class="p">))))</span>
 </span></code></pre></td></tr></table></div></figure>
 
+
+<p>(Enlive has a <code>defsnippet</code> macro which we could use here, but it
+doesn&#8217;t work in quite the way that we need.)</p>
 
 <p>For a real web application, we need a way of applying common layout
 and styling to the pages. With Enlive we can use a further
