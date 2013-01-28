@@ -14,8 +14,6 @@ output, it starts with plain HTML which is subjected to a series of
 transformations; the transformations are ordinary functions, targeted
 to the right part of the DOM by standard CSS selectors.
 
-[enlive]: https://github.com/cgrand/enlive
-
 This approach allows a clean separation between template and code; it
 avoids creating a novel, often crippled and always nasty hybrid
 language for the templates.
@@ -31,9 +29,11 @@ simple.
 [nolen]: https://github.com/swannodette/enlive-tutorial/ "David Nolen's tutorial"
 
 So, having wrestled with this for a while (and having surface after a
-longish dive in the Enlive source code), I've put together a [basic example]
-[github-project], which I think takes a reasonable, minimal
-approach to using Enlive for a simple web application.
+longish dive in the Enlive source code), I've put together a [basic
+example] [github-project], which I think takes a reasonable, minimal
+approach to using Enlive for a simple web application. It is not
+intended to be a complete introduction to what Enlive can do; for
+that, read the tutorials and [documentation] [enlive].
 
 When using Enlive, it's helpful to know that the library generally
 uses an internal data structure representation of HTML (called *nodes*
@@ -200,3 +200,4 @@ Here is the complete code, which you can see in a working project
 ```
 
 [github-project]: https://github.com/benbc/simple-enlive-example
+[enlive]: https://github.com/cgrand/enlive
