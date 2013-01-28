@@ -31,8 +31,9 @@ simple.
 So, having wrestled with this for a while (and having surface after a
 longish dive in the Enlive source code), I've put together a [basic example]
 [github-project], which I think takes a reasonable, minimal approach
-to using Enlive for a simple web application. It is not intended to be
-a complete introduction to what Enlive can do; for that, read the
+to using Enlive for a simple web application. This post walks through
+it, explaining how it fits together. It is not intended to be a
+complete introduction to what Enlive can do; for that, read the
 tutorials and [documentation] [enlive].
 
 <!--more-->
