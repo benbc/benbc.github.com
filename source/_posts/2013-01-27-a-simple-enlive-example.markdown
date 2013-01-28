@@ -8,15 +8,15 @@ published: false
 ---
 
 [Enlive] [enlive] is a Clojure library for generating HTML that uses
-_transformations_ instead of _templates_. Rather than starting with
+**transformations** instead of **templates**. Rather than starting with
 templates containing code which are then executed to produce the final
 output, it starts with plain HTML which is subjected to a series of
 transformations; the transformations are ordinary functions, targeted
 to the right part of the DOM by standard CSS selectors.
 
 This approach allows a clean separation between template and code; it
-avoids creating a novel, often crippled and always nasty hybrid
-language for the templates.
+avoids creating a novel hybrid language&mdash;often crippled and always
+nasty&mdash;for the templates.
 
 As you can tell, I am pretty sold on the benefits of selector-based
 templating, so I was excited to come across Enlive when I started
@@ -29,11 +29,11 @@ simple.
 [nolen]: https://github.com/swannodette/enlive-tutorial/ "David Nolen's tutorial"
 
 So, having wrestled with this for a while (and having surface after a
-longish dive in the Enlive source code), I've put together a [basic
-example] [github-project], which I think takes a reasonable, minimal
-approach to using Enlive for a simple web application. It is not
-intended to be a complete introduction to what Enlive can do; for
-that, read the tutorials and [documentation] [enlive].
+longish dive in the Enlive source code), I've put together a [basic example]
+[github-project], which I think takes a reasonable, minimal approach
+to using Enlive for a simple web application. It is not intended to be
+a complete introduction to what Enlive can do; for that, read the
+tutorials and [documentation] [enlive].
 
 When using Enlive, it's helpful to know that the library generally
 uses an internal data structure representation of HTML (called *nodes*
@@ -91,6 +91,9 @@ result with `emit*`.
   (GET "/" [] (emit* index))
   (GET "/show" [] (emit* (show things))))
 ```
+
+(Enlive has a `defsnippet` macro which we could use here, but it
+doesn't work in quite the way that we need.)
 
 For a real web application, we need a way of applying common layout
 and styling to the pages. With Enlive we can use a further
