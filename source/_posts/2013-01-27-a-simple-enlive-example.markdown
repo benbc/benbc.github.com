@@ -35,6 +35,8 @@ to using Enlive for a simple web application. It is not intended to be
 a complete introduction to what Enlive can do; for that, read the
 tutorials and [documentation] [enlive].
 
+<!--more-->
+
 When using Enlive, it's helpful to know that the library generally
 uses an internal data structure representation of HTML (called *nodes*
 in the documentation). Most functions and macros operate on and return
