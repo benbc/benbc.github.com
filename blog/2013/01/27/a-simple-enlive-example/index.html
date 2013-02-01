@@ -151,7 +151,7 @@ defining Compojure routes).</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='clojure'><span class='line'><span class="p">(</span><span class="nf">defroutes</span> <span class="nv">routes</span>
+</pre></td><td class='code'><pre><code class='clojure'><span class='line'><span class="p">(</span><span class="nf">defroutes</span> <span class="nv">app</span>
 </span><span class='line'>  <span class="p">(</span><span class="nf">GET</span> <span class="s">&quot;/&quot;</span> <span class="p">[]</span> <span class="p">(</span><span class="nf">emit*</span> <span class="nv">index</span><span class="p">)))</span>
 </span></code></pre></td></tr></table></div></figure>
 
@@ -197,7 +197,7 @@ result with <code>emit*</code>.</p>
 <span class='line-number'>5</span>
 </pre></td><td class='code'><pre><code class='clojure'><span class='line'><span class="p">(</span><span class="k">def </span><span class="nv">things</span> <span class="p">[</span><span class="s">&quot;one&quot;</span> <span class="s">&quot;two&quot;</span> <span class="s">&quot;three&quot;</span> <span class="s">&quot;four&quot;</span><span class="p">])</span>
 </span><span class='line'>
-</span><span class='line'><span class="p">(</span><span class="nf">defroutes</span> <span class="nv">routes</span>
+</span><span class='line'><span class="p">(</span><span class="nf">defroutes</span> <span class="nv">app</span>
 </span><span class='line'>  <span class="p">(</span><span class="nf">GET</span> <span class="s">&quot;/&quot;</span> <span class="p">[]</span> <span class="p">(</span><span class="nf">emit*</span> <span class="nv">index</span><span class="p">))</span>
 </span><span class='line'>  <span class="p">(</span><span class="nf">GET</span> <span class="s">&quot;/show&quot;</span> <span class="p">[]</span> <span class="p">(</span><span class="nf">emit*</span> <span class="p">(</span><span class="nf">show</span> <span class="nv">things</span><span class="p">))))</span>
 </span></code></pre></td></tr></table></div></figure>
@@ -255,7 +255,7 @@ it with <code>layout</code> when defining our routes.</p>
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='clojure'><span class='line'><span class="p">(</span><span class="nf">defroutes</span> <span class="nv">routes</span>
+</pre></td><td class='code'><pre><code class='clojure'><span class='line'><span class="p">(</span><span class="nf">defroutes</span> <span class="nv">app</span>
 </span><span class='line'>  <span class="p">(</span><span class="nf">GET</span> <span class="s">&quot;/&quot;</span> <span class="p">[]</span> <span class="p">(</span><span class="nf">layout</span> <span class="nv">index</span><span class="p">))</span>
 </span><span class='line'>  <span class="p">(</span><span class="nf">GET</span> <span class="s">&quot;/show&quot;</span> <span class="p">[]</span> <span class="p">(</span><span class="nf">layout</span> <span class="p">(</span><span class="nf">show</span> <span class="nv">things</span><span class="p">))))</span>
 </span></code></pre></td></tr></table></div></figure>
@@ -276,7 +276,7 @@ tags.</p>
 </span><span class='line'>  <span class="p">[</span><span class="o">#</span><span class="p">{</span><span class="ss">:title</span> <span class="ss">:h1</span><span class="p">}]</span> <span class="p">(</span><span class="nf">content</span> <span class="nv">title</span><span class="p">)</span>
 </span><span class='line'>  <span class="p">[</span><span class="ss">:div.content</span><span class="p">]</span> <span class="p">(</span><span class="nf">substitute</span> <span class="nv">content</span><span class="p">))</span>
 </span><span class='line'>
-</span><span class='line'><span class="p">(</span><span class="nf">defroutes</span> <span class="nv">routes</span>
+</span><span class='line'><span class="p">(</span><span class="nf">defroutes</span> <span class="nv">app</span>
 </span><span class='line'>  <span class="p">(</span><span class="nf">GET</span> <span class="s">&quot;/&quot;</span> <span class="p">[]</span> <span class="p">(</span><span class="nf">layout</span> <span class="s">&quot;Front page&quot;</span> <span class="nv">index</span><span class="p">))</span>
 </span><span class='line'>  <span class="p">(</span><span class="nf">GET</span> <span class="s">&quot;/show&quot;</span> <span class="p">[]</span> <span class="p">(</span><span class="nf">layout</span> <span class="s">&quot;Show things&quot;</span> <span class="p">(</span><span class="nf">show</span> <span class="nv">things</span><span class="p">))))</span>
 </span></code></pre></td></tr></table></div></figure>
@@ -361,7 +361,7 @@ We need to modify <code>layout</code> to strip these out.</p>
 </span><span class='line'>
 </span><span class='line'><span class="p">(</span><span class="k">def </span><span class="nb">index </span><span class="p">(</span><span class="nf">html-resource</span> <span class="s">&quot;index.html&quot;</span><span class="p">))</span>
 </span><span class='line'>
-</span><span class='line'><span class="p">(</span><span class="nf">defroutes</span> <span class="nv">routes</span>
+</span><span class='line'><span class="p">(</span><span class="nf">defroutes</span> <span class="nv">app</span>
 </span><span class='line'>  <span class="p">(</span><span class="nf">GET</span> <span class="s">&quot;/&quot;</span> <span class="p">[]</span> <span class="p">(</span><span class="nf">layout</span> <span class="s">&quot;Front page&quot;</span> <span class="nv">index</span><span class="p">))</span>
 </span><span class='line'>  <span class="p">(</span><span class="nf">GET</span> <span class="s">&quot;/show&quot;</span> <span class="p">[]</span> <span class="p">(</span><span class="nf">layout</span> <span class="s">&quot;Show things&quot;</span> <span class="p">(</span><span class="nf">show</span> <span class="nv">things</span><span class="p">))))</span>
 </span></code></pre></td></tr></table></div></figure>
