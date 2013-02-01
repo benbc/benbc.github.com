@@ -55,7 +55,7 @@ The simplest thing we can do is read in an HTML file from disk with
 This returns *nodes*, which can be rendered into strings with `emit*`.
 
 ``` clojure
-(defroutes routes
+(defroutes app
   (GET "/" [] (emit* index)))
 ```
 
@@ -90,7 +90,7 @@ result with `emit*`.
 ``` clojure
 (def things ["one" "two" "three" "four"])
 
-(defroutes routes
+(defroutes app
   (GET "/" [] (emit* index))
   (GET "/show" [] (emit* (show things))))
 ```
@@ -131,7 +131,7 @@ it. `deftemplate` also handles the call to `emit*` for us, so replace
 it with `layout` when defining our routes.
 
 ``` clojure
-(defroutes routes
+(defroutes app
   (GET "/" [] (layout index))
   (GET "/show" [] (layout (show things))))
 ```
@@ -145,7 +145,7 @@ tags.
   [#{:title :h1}] (content title)
   [:div.content] (substitute content))
 
-(defroutes routes
+(defroutes app
   (GET "/" [] (layout "Front page" index))
   (GET "/show" [] (layout "Show things" (show things))))
 ```
@@ -200,7 +200,7 @@ Here is the complete code, which you can see in a working project
 
 (def index (html-resource "index.html"))
 
-(defroutes routes
+(defroutes app
   (GET "/" [] (layout "Front page" index))
   (GET "/show" [] (layout "Show things" (show things))))
 ```
