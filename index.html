@@ -9,9 +9,9 @@
   <meta name="author" content="Ben Butler-Cole">
 
   
-  <meta name="description" content="Enlive is a Clojure library for generating HTML that uses
-transformations instead of templates. Rather than starting with
-templates containing code &hellip;">
+  <meta name="description" content="In my last post I showed a simple use of Enlive to
+create a web application with a common layout for all pages. I
+resisted the temptation to &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -84,7 +84,7 @@ templates containing code &hellip;">
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2013/01/27/a-simple-enlive-example/">A Simple Enlive Example</a></h1>
+      <h1 class="entry-title"><a href="/blog/2013/02/09/a-thin-layer-over-enlive/">A Thin Layer Over Enlive</a></h1>
     
     
       <p class="meta">
@@ -100,43 +100,29 @@ templates containing code &hellip;">
   
 
 
-<time datetime="2013-01-27T22:17:00+00:00" pubdate data-updated="true">Jan 27<span>th</span>, 2013</time>
+<time datetime="2013-02-09T19:10:00+00:00" pubdate data-updated="true">Feb 9<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><a href="https://github.com/cgrand/enlive">Enlive</a> is a Clojure library for generating HTML that uses
-<strong>transformations</strong> instead of <strong>templates</strong>. Rather than starting with
-templates containing code which are then executed to produce the final
-output, it starts with plain HTML which is subjected to a series of
-transformations; the transformations are ordinary functions, targeted
-to the right part of the DOM by standard CSS selectors.</p>
+  <div class="entry-content"><p>In my <a href="/blog/2013/01/27/a-simple-enlive-example/">last post</a> I showed a simple use of Enlive to
+create a web application with a common layout for all pages. I
+resisted the temptation to introduce any abstractions because I wanted
+to make it absolutely clear how to use the building blocks that Enlive
+provides.</p>
 
-<p>This approach allows a clean separation between template and code; it
-avoids creating a novel hybrid language&mdash;often crippled and always
-nasty&mdash;for the templates.</p>
-
-<p>As you can tell, I am pretty sold on the benefits of selector-based
-templating, so I was excited to come across Enlive when I started
-playing with Clojure. Enlive is powerful and somewhat complex; there
-are two <a href="https://github.com/cgrand/enlive/wiki/Table-and-Layout-Tutorial,-Part-1:-The-Goal" title="Brian Marick's tutorial">good</a> <a href="https://github.com/swannodette/enlive-tutorial/" title="David Nolen's tutorial">tutorials</a> but I found it hard to get
-straight in my head which bits were really necessary to do something
-simple.</p>
-
-<p>So, having wrestled with this for a while (and having surface after a
-longish dive in the Enlive source code), I&#8217;ve put together a <a href="https://github.com/benbc/simple-enlive-example">basic example</a>, which I think takes a reasonable, minimal approach
-to using Enlive for a simple web application. This post walks through
-it, explaining how it fits together. It is not intended to be a
-complete introduction to what Enlive can do; for that, read the
-tutorials and <a href="https://github.com/cgrand/enlive">documentation</a>.</p>
+<p>But my fingers were itching the whole time to abstract away some of
+the wrinkles and I couldn&#8217;t let it rest until I&#8217;d had a play to see
+what it looks like. So here is a very thin layer over Enlive that
+manifests some of the structure that I saw.</p>
 
 </div>
   
   
     <footer>
-      <a rel="full-article" href="/blog/2013/01/27/a-simple-enlive-example/">Read on &rarr;</a>
+      <a rel="full-article" href="/blog/2013/02/09/a-thin-layer-over-enlive/">Read on &rarr;</a>
     </footer>
   
 
@@ -223,7 +209,7 @@ was as a consultant (with <a href="http://www.thoughtworks.com">ThoughtWorks</a>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2013/01/27/a-simple-enlive-example/">A simple Enlive example</a>
+        <a href="/blog/2013/02/09/a-thin-layer-over-enlive/">A thin layer over Enlive</a>
       </li>
     
       <li class="post">
