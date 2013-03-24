@@ -25,6 +25,8 @@ complaints about CloudFormation:
  * The template syntax is _horrible_: hard to write and even harder to
    read.
 
+<!--more-->
+
 I can't claim to have a better solution to the syntax problem. Given
 the constraints, the current syntax is probably reasonable; and the
 language itself is extremely well thought-out. Perhaps the long-term
